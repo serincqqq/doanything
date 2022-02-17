@@ -1,0 +1,71 @@
+span {
+	/* font-family: "ACGN-LianChuangGB-Flash"; */
+	color: #caebf2;
+	padding: 18rpx;
+	font-size: 40rpx;
+}
+.history{
+	text-align: center;
+	padding-top: 15rpx;
+	margin: 0 auto;
+	color: #E17055;
+	font-size: 36rpx;
+	text-decoration: underline;
+}
+image {
+	padding: 11rpx;
+	height: 343rpx;
+	width: 80%;
+}
+
+uni-image {
+	display: inline-block;
+}
+
+.back {
+	padding: 55rpx 0 0 36rpx;
+	float: left;
+}
+
+.account {
+	padding-top: 80rpx;
+	text-align: center;
+}
+
+input {
+	border-radius: 18rpx;
+	border: 2px dashed #c09f80;
+	background-color: #F8EEE7;
+	height: 80rpx;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 18rpx;
+}
+
+input:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.content {
+	margin: 0 auto;
+	height: 360rpx;
+	width: 80%;
+	border: 2px dashed #caebf2;
+	text-align: center;
+	margin-bottom: 44rpx;
+}
+
+.upload {
+	color: #caebf2;
+	margin-bottom: 18rpx;
+	font-size: 33rpx;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.content text {
+	line-height: 360rpx;
+}

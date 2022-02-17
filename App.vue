@@ -25,4 +25,5 @@
 <style lang="less">
 	/* 引入iconfont，下面写iconfont.css的存放路径 */
 	@import "style/iconfont/iconemail.css";
+
 </style>

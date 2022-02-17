@@ -1,0 +1,26 @@
+.date {
+	background-color: #F8EEE7;
+	height: 55rpx;
+	padding: 18rpx;
+	border-bottom:2px solid #f4decb;
+	font-size:35rpx ;
+	color:#b56357 ;
+}
+.detail{
+	padding: 10rpx;
+	display: flex;
+	/* height: 55rpx; */
+	font-size: 30rpx;
+	color: #8bb8d6;
+}
+uni-icons{
+	float: right;
+}
+.title {
+	font-family: "ACGN-SetoPopGB-Flash";
+	font-size: 45rpx;
+	color:#DF744A;
+	text-align: center;
+	background-color: #caebf2;
+	padding: 36rpx;
+}

@@ -1,0 +1,31 @@
+.title {
+	font-size: 45rpx;
+	color: #984b43;
+	text-align: center;
+	background-color: #caebf2;
+	padding: 36rpx;
+	font-family: "ACGN-SetoPopGB-Flash";
+}
+
+image {
+	height: 260rpx;
+	width: 360rpx;
+	border: 2px solid gray;
+}
+
+.record {
+	display: flex;
+	padding-top: 18rpx;
+}
+#history{
+	background-color:  #F8EEE7;
+	height: 100vh;
+}
+.information {
+	padding: 28rpx;
+	display: flex;
+	flex-direction: column;
+	color: #c09f80;
+	font-size: 36rpx;
+	line-height: 70rpx;
+}

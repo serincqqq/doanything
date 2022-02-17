@@ -947,7 +947,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7778,7 +7778,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7799,14 +7799,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7892,7 +7892,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"do anything","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8078,9 +8078,10 @@ function internalMixin(Vue) {
 
   Vue.prototype.$emit = function(event) {
     if (this.$scope && event) {
-      (this.$scope['_triggerEvent'] || this.$scope['triggerEvent'])(event, {
-        __args__: toArray(arguments, 1)
-      });
+      (this.$scope['_triggerEvent'] || this.$scope['triggerEvent'])
+        .call(this.$scope, event, {
+          __args__: toArray(arguments, 1)
+        })
     }
     return oldEmit.apply(this, arguments)
   };
@@ -8766,7 +8767,148 @@ function resolveLocaleChain(locale) {
 
 /***/ }),
 
-/***/ 47:
+/***/ 5:
+/*!************************************************************************!*\
+  !*** C:/Users/86188/Documents/HBuilderProjects/do anything/pages.json ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 68:
+/*!******************************************************************************!*\
+  !*** C:/Users/86188/Documents/HBuilderProjects/do anything/static/common.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var GetNowTime = function GetNowTime(time) {
+  var date = time,
+  year = date.getFullYear(),
+  month = date.getMonth() + 1,
+  day = date.getDate(),
+  hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours(),
+  minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes(),
+  second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+  month >= 1 && month <= 9 ? month = "0" + month : "";
+  day >= 0 && day <= 9 ? day = "0" + day : "";
+  // var timer = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+  var timer = year + '-' + month + '-' + day;
+  return timer;
+};
+
+// 格式化电话号码
+var GetPhone = function GetPhone(phone) {
+  var tel = phone.slice(0, 3) + '****' + phone.slice(7, 11);
+  return tel;
+};
+//返回日期和周几数组
+function weekDate() {
+
+  var myDate = new Date();
+  var year = myDate.getFullYear();
+  myDate.toLocaleDateString();
+  var month = myDate.getMonth() + 1;
+  var time = myDate.getFullYear() + '年' + month + '月' + myDate.getDate() + '日';
+  var total = 1; // 个数
+  var dayList = [];
+  dayList.push({
+    'day': myDate.getDate(),
+    'month': myDate.getMonth() + total,
+    'week': toWeekDay(myDate.getDay()),
+    'year': myDate.getFullYear() });
+
+  for (var i = 0; i < 10; i++) {
+    myDate.setDate(myDate.getDate() + total); // number 是最近几天 则会自动计算
+    // 需求 月份-日 星期几
+    dayList.push({
+      'day': myDate.getDate(),
+      'month': myDate.getMonth() + total,
+      'week': toWeekDay(myDate.getDay()),
+      'year': myDate.getFullYear() });
+
+  }
+  // return dayList;
+  var length = dayList.length;
+  var arrOne = dayList[0];
+  var arrLast = dayList[length - 1];
+  var StartDate = arrOne.year.toString() + '-' + arrOne.month + '-' + arrOne.day;
+  var EndDate = arrLast.year.toString() + '-' + arrLast.month + '-' + arrLast.day;
+  return {
+    dayList: dayList,
+    StartDate: StartDate,
+    EndDate: EndDate,
+    year: year };
+
+}
+
+function toWeekDay(weekDay) {// 传入数据 讲一周的某一天返回成中文状态下的字符
+  switch (weekDay) {
+    case 1:
+      return '一';
+      break;
+    case 2:
+      return '二';
+      break;
+    case 3:
+      return '三';
+      break;
+    case 4:
+      return '四';
+      break;
+    case 5:
+      return '五';
+      break;
+    case 6:
+      return '六';
+      break;
+    case 0:
+      return '日';
+      break;
+    default:
+      break;}
+
+  return '传入未知参数';
+}
+module.exports = {
+  GetNowTime: GetNowTime,
+  GetPhone: GetPhone,
+  weekDate: weekDate };
+
+/***/ }),
+
+/***/ 77:
+/*!****************************************************************************!*\
+  !*** C:/Users/86188/Documents/HBuilderProjects/do anything/static/time.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function format(fmt) {//author: meizz
+  var o = {
+    "M+": this.getMonth() + 1, //月份 
+    "d+": this.getDate(), //日 
+    "H+": this.getHours(), //小时 
+    "m+": this.getMinutes(), //分 
+    "s+": this.getSeconds(), //秒 
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+    "S": this.getMilliseconds() //毫秒 
+  };
+  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.
+  length));
+  for (var k in o) {
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ?
+    o[
+    k] : ("00" + o[k]).substr(("" + o[k]).length));}
+  return fmt;
+}
+
+/***/ }),
+
+/***/ 85:
 /*!*****************************************************************************************************************!*\
   !*** C:/Users/86188/Documents/HBuilderProjects/do anything/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \*****************************************************************************************************************/
@@ -9940,17 +10082,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "font_class": "cart",
     "unicode": "e631",
     "unicode_decimal": 58929 }] };exports.default = _default;
-
-/***/ }),
-
-/***/ 5:
-/*!************************************************************************!*\
-  !*** C:/Users/86188/Documents/HBuilderProjects/do anything/pages.json ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ })
 

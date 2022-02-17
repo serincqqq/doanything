@@ -6,35 +6,78 @@ uni-page-head
 
 /* 引入iconfont，下面写iconfont.css的存放路径 */
 @font-face {
-  font-family: 'iconfont';  /* Project id 3172349 */
-  src: url('https://at.alicdn.com/t/font_3172349_by2h6jwccc.woff2?t=1644329725335') format('woff2'),
-       url('https://at.alicdn.com/t/font_3172349_by2h6jwccc.woff?t=1644329725335') format('woff'),
-       url('https://at.alicdn.com/t/font_3172349_by2h6jwccc.ttf?t=1644329725335') format('truetype');
+	font-family: 'iconfont';
+	/* Project id 3172349 */
+	src: url('//at.alicdn.com/t/font_3172349_jyrsx2h5fp.woff2?t=1644586642491') format('woff2'),
+		url('//at.alicdn.com/t/font_3172349_jyrsx2h5fp.woff?t=1644586642491') format('woff'),
+		url('//at.alicdn.com/t/font_3172349_jyrsx2h5fp.ttf?t=1644586642491') format('truetype');
 }
 .iconfont {
-  font-family: "iconfont" !important;
-  font-size: 30px;
-  font-style: normal;
-  color: #e17055;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: "iconfont" !important;
+	/* font-size: 30px; */
+	font-style: normal;
+	color: #e17055;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 .icon-xuxian:before {
-  content: "\e616";
-  position: absolute;
-  top: 100px;
-  right: 120px;
+	content: "\e616";
+	position: absolute;
+	font-size: 30px;
+	top: 100px;
+	right: 120px;
 }
 .icon-a-Emaildianziyoujianxinfenglianxi:before {
-  content: "\e6ff";
-  position: absolute;
-  top: 100px;
-  left: 100px;
+	content: "\e6ff";
+	position: absolute;
+	font-size: 30px;
+	top: 100px;
+	left: 100px;
 }
 .icon-a-youxiangdianziyouxiang:before {
-  content: "\e6fe";
-  position: absolute;
-  top: 100px;
-  right: 100px;
+	content: "\e6fe";
+	position: absolute;
+	font-size: 30px;
+	top: 100px;
+	right: 100px;
+}
+.icon-_xiangji:before {
+	content: "\e615";
+	font-size: 30px;
+	color: pink;
+	font-size: 50px;
+}
+.icon-yigouxuan:before {
+	font-size: 30px;
+	content: "\e63d";
+}
+.icon-gouxuankuang:before {
+	font-size: 30px;
+	content: "\e610";
+}
+.icon-editor:before {
+	margin-left: 20px;
+	content: "\e63e";
+	font-size: 18px;
+}
+.icon-lishijilu:before {
+	content: "\e63f";
+	margin: 0;
+	padding: 0;
+}
+.icon-lishi:before {
+	content: "\e640";
+}
+.icon-jinbi:before {
+	content: "\eb19";
+	font-size: 20px;
+}
+.icon-paixu:before {
+	content: "\e618";
+	/* font-size: 24px;
+	padding: 18rpx; */
+}
+.icon-daka:before {
+	content: "\f42e";
 }
 

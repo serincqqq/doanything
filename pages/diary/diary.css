@@ -1,28 +1,101 @@
-.text {
-	margin: 0 auto;
+p {
+	font-family: "ACGN-SetoPopGB-Flash";
+	position: absolute;
+	top: 150px;
+	left: 90px;
+}
+
+.fgx {
+	position: absolute;
+	top: 100px;
+	left: 140px;
+	color: #007AFF;
+}
+
+.link-top {
+	position: absolute;
+	top: 180px;
+	width: 100%;
+	height: 2px;
+	border-top: solid #ACC0D8 2px;
+}
+
+
+.zz {
+	height: 100vh;
+	width: 100%;
+	background-color: #f8eee7;
+	z-index: 99;
+	position: relative;
+}
+
+.paper {
+	z-index: 999;
+	height: 300px;
+	width: 200px;
+	background-color: #C09F80;
 }
 
 .bg {
-	overflow: hidden;
-	width: 100%;
-	height: 100vh;
 	position: relative;
 	margin: 0 auto;
 }
-.confirm{
-	color: white;
+
+.back {
+	position: absolute;
+	top: 100rpx;
+	left: 24px;
+	color: #C09F80;
+	font-size: 28px;
+	font-weight: bold;
 }
+
+.backIndex {
+	text-decoration: underline;
+	font-style: italic;
+	position: absolute;
+	top: 200px;
+	left: 120px;
+	color: #C09F80;
+	font-size: 18px;
+}
+
+.write {
+	text-decoration: underline;
+	font-style: italic;
+	position: absolute;
+	top: 200px;
+	right: 120px;
+	color: #C09F80;
+	font-size: 18px;
+}
+
+.confirm {
+	text-decoration: underline;
+	font-style: italic;
+	position: absolute;
+	top: 100rpx;
+	right: 22px;
+	color: #C09F80;
+	font-size: 24px;
+	font-family: ;
+}
+
 #box {
 	font-family: "ACGN-SetoPopGB-Flash";
-	height: 70vh;
-	padding: 30px;
+	height: 80vh;
+	width: 80%;
 	position: absolute;
-	top: 300rpx;
-	font-size: 20px;
+	top: 180rpx;
+	font-size: 36rpx;
+	color: #945d60;
+	transform: translateX(-50%);
+	left: 50%;
+	line-height: 36rpx;
 }
 
 image {
 	width: 100%;
-/* 	height: 100vh; */
 	vertical-align: bottom;
+	height: 100vh;
 }

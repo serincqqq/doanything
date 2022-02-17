@@ -1,9 +1,13 @@
 {
   "pages": [
+    "pages/choose/choose",
     "pages/index/index",
+    "pages/test/test",
     "pages/diary/diary",
-    "pages/account/account",
-    "pages/attendance/attendance"
+    "pages/viewDiary/viewDiary",
+    "pages/countHistory/countHistory",
+    "pages/date/date",
+    "pages/account/account"
   ],
   "subPackages": [],
   "window": {

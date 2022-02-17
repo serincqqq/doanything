@@ -1,0 +1,120 @@
+.choose.data-v-c102b434 {
+	background-color: #FEDCD2;
+	height: 100vh;
+	position: relative;
+}
+.bottomLogo.data-v-c102b434{
+	position: absolute;
+	bottom:18rpx;
+	right: 18rpx;
+	width: 60rpx;
+	height: 60rpx;
+}
+.logo.data-v-c102b434{
+	width: 54rpx;
+	height: 54rpx;
+	margin-right: 18rpx;
+}
+.chooseInput.data-v-c102b434 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	height: 600rpx;
+	width: 500rpx;
+	padding: 36rpx;
+	border: 6px solid #fff7c0;
+	text-align: center;
+	border-radius: 18rpx;
+}
+.chooseInput input.data-v-c102b434 {
+	padding: 4px;
+	margin-top:36rpx;
+	border-radius: 18rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	font-size: 36rpx;
+	border: 2px dashed #cf6766;
+	color: #fff7c0;
+	border-radius: 6px;
+}
+.chooseInput button.data-v-c102b434{
+	
+	width: 360rpx;
+	margin-top: 36rpx;
+	color:#cf6766 ;
+	border-radius: 10px;
+}
+.title.data-v-c102b434 {
+	line-height: 600rpx;
+	text-align: center;
+	font-size:90rpx;
+}
+.back.data-v-c102b434 {
+	position: relative;
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+	font-size: 54rpx;
+	/* padding: 36rpx; */
+	color: #cf6766;
+	background-color: #fff7c0;
+}
+.zhezhao.data-v-c102b434 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+}
+.flip-container.data-v-c102b434 {
+	z-index: 999;
+	-webkit-perspective: 1000;
+	        perspective: 1000;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.flip-container.data-v-c102b434,
+.front.data-v-c102b434,
+.back.data-v-c102b434,
+.face.data-v-c102b434 {
+	width: 450rpx;
+	height: 650rpx;
+}
+.face.data-v-c102b434 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+/* flip speed goes here */
+.flipper.data-v-c102b434 {
+	transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	position: relative;
+}
+/* hide back of pane during swap */
+.front.data-v-c102b434,
+.back.data-v-c102b434 {
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front.data-v-c102b434 {
+	z-index: 2;
+}
+.flip.data-v-c102b434 {
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+}
+
